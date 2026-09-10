@@ -1,9 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    ...
-</head>
-<body>
-    ...
-</body>
-</html>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stub — book by seat number</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#120E16;
+    --surface:#1D1721;
+    --surface-2:#251D2C;
+    --border:#3A2F44;
+    --gold:#E3AE4C;
+    --gold-dim:#8a723a;
+    --crimson:#C2544C;
+    --emerald:#4F9A72;
+    --text:#F3EEE7;
+    --text-muted:#A89BB0;
+    --text-faint:#786C87;
+    --radius-card:22px;
+    --serif:'Fraunces', serif;
+    --sans:'Inter', sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;}
+  button{font-family:inherit;cursor:pointer;}
+  input,select{font-family:inherit;}
+
+  :focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+  }
+
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ---------- header ---------- */
+  header{
+    padding:26px 0 10px;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+  }
+  .header-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .logo{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:22px;
+    letter-spacing:0.02em;
+    display:flex;
+    align-items:center;
+    gap:9px;
+  }
+  .logo .dot{
+    width:9px;height:9px;border-radius:50%;
+    background:var(--gold);
+    box-shadow:0 0 10px 2px rgba(227,174,76,0.55);
+  }
+  nav{display:flex;gap:28px;font-size:14.5px;color:var(--text-muted);}
+  nav a{text-decoration:none;transition:color .2s;}
+  nav a:hover{color:var(--text);}
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding:74px 0 56px;
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:48px;
+    align-items:center;
+  }
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(38px,5vw,60px);
+    line-height:1.05;
+    margin:0 0 22px;
+    max-width:11ch;
+  }
+  .hero h1 em{
+    font-style:italic;
+    font-weight:500;
+    color:var(--gold);
+  }
+  .hero p{
+    color:var(--text-muted);
+    font-size:17px;
+    max-width:46ch;
+    margin:0 0 30px;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    border:none;
+    border-radius:12px;
+    padding:14px 24px;
+    font-size:15px;
+    font-weight:600;
+    background:var(--gold);
+    color:#241705;
+    transition:transform .15s ease, background .2s;
+  }
+  .btn:hover{background:#efbe63;}
+  .btn:active{transform:scale(0.98);}
+  .btn.ghost{
+    background:transparent;
+    border:1px
